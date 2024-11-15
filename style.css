@@ -4,9 +4,28 @@
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Electrolize", sans-serif;
-    letter-spacing: -2px;
+body{
+    overflow-x: hidden;
+}
+
+:root {
+    --font-heading: "Electrolize", sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+h1, h2, h3 {
+font-family: var(--font-heading);
+letter-spacing: -0.02em;
+}
+
+h4, h5, h6 {
+font-family: var(--font-body);
+letter-spacing: -0.02em;
+}
+
+h2{
+    font-size: 48px;
+    line-height: 56px;
 }
 
 p{
@@ -21,7 +40,7 @@ p{
 }
 
 header{
-    background-image: url('./assets/bg-top.png');
+    background-image: url('./assets/bg-top.webp');
     padding-bottom: 300px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -62,3 +81,203 @@ header{
     color: #FFFFFF;
 
 }
+
+.cards{
+    margin-top: -150px;  
+    max-width: 102vw;
+}
+
+.cards h3{
+    font-family: 'Inter';  
+    font-size: 18px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.cards p {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.cards > div{
+    padding: 40px;
+}
+
+.cards > .dark{
+    background-color: #050F16;
+    height: 80%;
+}
+
+.cards > .blue{
+    background-color: #179EFF;
+    padding: 56px 40px;
+}
+
+.destaque{
+    padding: 8px 24px;
+    width: fit-content;
+
+    background: rgba(23, 158, 255, 0.06);
+    border-radius: 49px;
+    color: #179EFF;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.service-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 24px;
+    
+}
+
+.service-card img{
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.service-card h5{
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 800;
+}
+
+.service-card a{
+    padding: 0;
+    color: #179EFF;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.proccess-card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+    gap: 24px;
+
+    background: rgba(2, 13, 20, 0.72);
+    border-radius: 32px;
+}
+
+
+@keyframes dep-animation {
+    0%{
+        right: 0px;
+    }
+    100%{
+        right: 1000px;
+    }
+}
+
+
+
+.dep-wrapper{
+    overflow: hidden;
+    height: 516px;
+    position: relative;
+}
+.dep-container{
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    position: absolute;
+
+    animation: dep-animation 80s infinite forwards linear; 
+}
+
+.border-effect{
+    background: linear-gradient(90deg, #ffffff 0%, rgb(255 255 255 / 0%) 100%);
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+    width: 100px;
+    height: 500px;
+}
+.end{
+    right: 0;
+    left: auto;
+    transform: rotate(180deg);
+}
+
+.dep-card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+    gap: 24px;
+    width: 100%;
+    min-width: 332px;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(66, 75, 234, 0.2);
+    border-radius: 32px;
+
+}
+
+.dep-card .name{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+    margin: 0;
+    color: #050F16;
+}
+
+.dep-card .workload{
+    font-style: italic;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 14px;
+
+    color: #050F16;
+}
+
+.cta-container{
+    padding: 64px;
+
+    background: rgba(23, 158, 255, 0.04);
+    border: 1px solid #179EFF;
+    border-radius: 32px;
+
+}
+
+@media (max-width: 990px) {
+    header{
+        background-image: url('./assets/bg-top-mobile.webp');
+        background-position: bottom right;
+    }
+    .cards{
+        margin-top: -0px;  
+    }
+    .titulo-principal{
+        font-size: 40px;
+        line-height: 48px;
+    }
+    .xp-title{
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .divider {
+      transform: rotate(90deg);
+    }
+
+    .container{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+  }
+
+@media (max-width: 640px) {
+    
+    .dep-container{
+        transform: scale(0.8);
+    }
+  }
