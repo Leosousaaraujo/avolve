@@ -259,7 +259,6 @@ header{
 
 .cta-container{
     padding: 64px;
-
     background: rgba(23, 158, 255, 0.04);
     border: 1px solid #179EFF;
     border-radius: 32px;
@@ -291,9 +290,18 @@ header{
         padding-left: 16px;
         padding-right: 16px;
     }
+
+    .proccess a{
+        width: 100% !important;
+    }
   }
 
 @media (max-width: 640px) {
+
+    h2{
+        font-size: 40px;
+        line-height: 48px;
+    }
     
     .dep-container{
         transform: scale(0.8);
