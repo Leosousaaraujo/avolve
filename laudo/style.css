@@ -193,6 +193,10 @@ header{
     }
 }
 
+.header p{
+    width: 75%
+}
+
 
 
 .dep-wrapper{
@@ -265,6 +269,50 @@ header{
 
 }
 
+.logo-carousel{
+    overflow: hidden;
+}
+
+.logo-track{
+    animation: slidein 30s linear infinite;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.logos-wrap{
+    width: 2600px;
+    display: inline-block;
+    margin: 0px 80px;
+}
+
+.logos-wrap > img{
+    width: 180px;
+    margin: 0 80px;
+    animation: fade-in 0.5s 
+    cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+}
+
+  
+  @keyframes slidein {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-2600px, 0, 0);
+    }
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+
+
 @media (max-width: 990px) {
     header{
         background-image: url('./assets/bg-top-mobile.webp');
@@ -310,4 +358,14 @@ header{
     .cta-container p{
         width: 100% !important;
     }
+
+    .header p{
+        width: 100%
+    }
+    
+    .logos-wrap > img{
+        width: 120px;
+        margin: 0 24px;
+    }
+    
   }
