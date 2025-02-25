@@ -45,20 +45,20 @@ p{
 }
 
 .logo{
-    height: 64px;
+    height: 64px !important;
 }
 
 header{
     background-image: url('../assets/bg-top.webp');
-    padding-bottom: 300px;
+    padding-bottom: 200px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
 }
 
 .titulo-principal{
-    font-size: 48px;
-    line-height: 56px;
+    font-size: 56px;
+    line-height: 64px;
 }
 
 .titulo-principal span{
