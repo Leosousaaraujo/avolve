@@ -1,0 +1,413 @@
+@keyframes whatsEntry {
+    0% {
+        bottom: -100px;
+    }
+    100%{
+        bottom: 16px;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+:root {
+    --font-heading: "Electrolize", sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+h1, h2, h3 {
+font-family: var(--font-heading);
+letter-spacing: -0.02em;
+}
+
+h4, h5, h6 {
+font-family: var(--font-body);
+letter-spacing: -0.02em;
+}
+
+h2{
+    font-size: 48px;
+    line-height: 56px;
+}
+
+p{
+    font-family: 'Inter', sans-serif;
+    opacity: 0.9;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.logo{
+    height: 64px;
+}
+
+header{
+    background-image: url('../assets/bg-top.webp');
+    padding-bottom: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.titulo-principal{
+    font-size: 48px;
+    line-height: 56px;
+}
+
+.titulo-principal span{
+    background-color: #179EFF;
+    padding: 0 8px;
+    border-radius: 4px;
+}
+
+.btn-primary{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 32px;
+    gap: 14px;
+    width: fit-content;
+
+    background: linear-gradient(90deg, #33DE58 0%, #33CC3D 100%);
+    box-shadow: 0px 4px 26.6px rgba(14, 80, 34, 0.62);
+    border-radius: 8px;
+    border: none;
+
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+}
+
+.cards{
+    margin-top: -150px;  
+    max-width: 102vw;
+}
+
+.cards h3{
+    font-family: 'Inter';  
+    font-size: 18px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.cards p {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.cards > div{
+    padding: 40px;
+}
+
+.cards > .dark{
+    background-color: #050F16;
+    height: 80%;
+}
+
+.cards > .blue{
+    background-color: #179EFF;
+    padding: 56px 40px;
+}
+
+.destaque{
+    padding: 8px 24px;
+    width: fit-content;
+
+    background: rgba(23, 158, 255, 0.06);
+    border-radius: 49px;
+    color: #179EFF;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.service-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 24px;
+    
+}
+
+.service-card img{
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.service-card h5{
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 800;
+}
+
+.service-card a{
+    padding: 0;
+    color: #179EFF;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.proccess-card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+    gap: 24px;
+
+    background: rgba(2, 13, 20, 0.72);
+    border-radius: 32px;
+}
+
+.whatsapp-button{
+    position: fixed;
+    bottom: -100px;
+    right: 16px;
+    animation: whatsEntry 600ms forwards cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-delay: 2s;
+    z-index: 100;
+}
+
+
+@keyframes dep-animation {
+    0%{
+        right: 0px;
+    }
+    100%{
+        right: 1000px;
+    }
+}
+
+.header p{
+    width: 75%
+}
+
+
+
+.dep-wrapper{
+    overflow: hidden;
+    height: 516px;
+    position: relative;
+}
+.dep-container{
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    position: absolute;
+
+    animation: dep-animation 80s infinite forwards linear; 
+}
+
+.border-effect{
+    background: linear-gradient(90deg, #ffffff 0%, rgb(255 255 255 / 0%) 100%);
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+    width: 100px;
+    height: 500px;
+}
+.end{
+    right: 0;
+    left: auto;
+    transform: rotate(180deg);
+}
+
+.dep-card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+    gap: 24px;
+    width: 100%;
+    min-width: 332px;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(66, 75, 234, 0.2);
+    border-radius: 32px;
+
+}
+
+.dep-card .name{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+    margin: 0;
+    color: #050F16;
+}
+
+.dep-card .workload{
+    font-style: italic;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 14px;
+
+    color: #050F16;
+}
+
+.cta-container{
+    padding: 64px;
+    background: rgba(23, 158, 255, 0.04);
+    border: 1px solid #179EFF;
+    border-radius: 32px;
+
+}
+
+.logo-carousel{
+    overflow: hidden;
+}
+
+.logo-track{
+    animation: slidein 30s linear infinite;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.logos-wrap{
+    width: 2600px;
+    display: inline-block;
+    margin: 0px 80px;
+}
+
+.logos-wrap > img{
+    width: 180px;
+    margin: 0 80px;
+    animation: fade-in 0.5s 
+    cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+}
+
+  
+  @keyframes slidein {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-2600px, 0, 0);
+    }
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.testimonial-card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+    gap: 16px;
+    width: 100%;
+    margin-top: 16px;
+
+    background: #EFF7FF;
+    border: 1px solid rgba(66, 75, 234, 0.2);
+    border-radius: 32px;
+    color: #050F16;
+    position: relative;
+
+    p{
+        opacity: 0.8;
+    }
+
+    strong{
+        font-size: 20px;
+        display: block;
+    }
+
+    i{
+        font-size: 12px;
+        display: block;
+        opacity: 0.7;
+    }
+
+    img{
+        width: 80px;
+    }
+}
+
+.aspas{
+    position: absolute;
+    top: -32px;
+    left: 16px;
+}
+
+
+@media (max-width: 990px) {
+    header{
+        background-image: url('./assets/bg-top-mobile.webp');
+        background-color: #000000;
+        background-position: bottom;
+        background-size: contain;
+    }
+    .cards{
+        margin-top: -0px;  
+    }
+    .titulo-principal{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .xp-title{
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .divider {
+      transform: rotate(90deg);
+    }
+
+    .container{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .proccess a{
+        width: 100% !important;
+    }
+  }
+
+@media (max-width: 640px) {
+
+    h2{
+        font-size: 40px;
+        line-height: 48px;
+    }
+    
+    .dep-container{
+        transform: scale(0.8);
+    }
+
+    .cta-container p{
+        width: 100% !important;
+    }
+
+    .header p{
+        width: 100%
+    }
+    
+    .logos-wrap > img{
+        width: 120px;
+        margin: 0 24px;
+    }
+    
+  }
