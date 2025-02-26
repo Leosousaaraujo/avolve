@@ -189,6 +189,10 @@ header{
     opacity: 0.6;
 }
 
+.service-card span{
+    color: #179EFF;
+}
+
 .service-card a{
     padding: 0;
     color: #179EFF;
